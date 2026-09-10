@@ -30,7 +30,7 @@
             </div>
           </div>
           <div class="col-lg-6 hero-image">
-            <img src="assets/images/Home Page banner right side image.png" alt="Magnifying glass — clarity and insight">
+            <div id="hero-lottie" class="hero-lottie"></div>
           </div>
         </div>
       </div>
@@ -124,6 +124,18 @@
   <div data-include="partials/footer.html"></div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+  <script>
+    if (document.getElementById('hero-lottie')) {
+      lottie.loadAnimation({
+        container: document.getElementById('hero-lottie'),
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: 'assets/images/banner-lottie.json'
+      });
+    }
+  </script>
   <script src="assets/js/include.js"></script>
 </body>
 </html>
