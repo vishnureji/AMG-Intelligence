@@ -669,32 +669,81 @@ a:hover {
 /* =========================================================
    Page: events.html
    ========================================================= */
+.why-attend-eyebrow {
+  font-family: Georgia, serif;
+  font-weight: 400;
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+}
+
+.why-attend-eyebrow .eyebrow-accent {
+  color: var(--amg-accent);
+}
+
+.why-attend-eyebrow .eyebrow-dark {
+  color: #1C1C1C;
+}
+
 .why-attend-icon {
-  width: 48px;
-  height: 48px;
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+}
+
+.why-attend-label {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--amg-text);
 }
 
 .formats-banner {
   background:
     linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
     url('../images/Executive forums leadership dinners rankings celebrations and industry conferences-background.png') center / cover no-repeat;
+  border-radius: 0;
 }
 
-.formats-banner h2 {
-  font-size: 1.75rem;
+.formats-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.85rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.formats-desc {
+  font-family: Georgia, serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .enquiry-section {
-  background-color: var(--amg-footer-bg);
+  background-color: #F3F3F3;
+}
+
+.enquiry-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.enquiry-desc {
+  font-family: Georgia, serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555555;
 }
 
 .enquiry-form-panel {
-  border: 1px solid var(--amg-border-strong);
+  border: 1px solid #D1D1D1;
   background-color: transparent;
 }
 
 .enquiry-row {
-  border-bottom: 1px solid var(--amg-border-strong);
+  border-bottom: 1px solid #D1D1D1;
   margin: 0;
 }
 
@@ -708,26 +757,29 @@ a:hover {
 
 @media (min-width: 768px) {
   .border-end-md {
-    border-right: 1px solid var(--amg-border-strong);
+    border-right: 1px solid #D1D1D1;
   }
 }
 
 .enquiry-label {
   display: block;
-  font-size: 0.7rem;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 0.725rem;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
-  font-weight: 600;
-  color: var(--amg-muted);
-  margin-bottom: 0.25rem;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+  color: #262524;
+  margin-bottom: 0.35rem;
 }
 
 .enquiry-input {
   border: 0;
   padding: 0;
   background: transparent;
-  font-size: 0.95rem;
+  font-size: 0.925rem;
+  color: var(--amg-text);
   border-radius: 0;
+  box-shadow: none !important;
 }
 
 .enquiry-input:focus {
@@ -735,23 +787,53 @@ a:hover {
   background: transparent;
 }
 
+.enquiry-input::placeholder {
+  color: #9E9E9E;
+  font-size: 0.875rem;
+  font-family: 'Inter', sans-serif;
+}
+
 .pill-option {
-  font-size: 0.8rem;
-  padding: 0.4rem 0.9rem;
-  color: var(--amg-text);
-  border-color: var(--amg-border-strong);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 0.785rem;
+  font-weight: 500;
+  padding: 0.425rem 0.85rem;
+  background-color: #ffffff;
+  border: 1px solid #D1D1D1;
+  color: #262524;
+  border-radius: 0;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
 
 .pill-option:hover {
-  color: var(--amg-text);
-  border-color: var(--amg-border-strong);
-  background-color: rgba(0, 0, 0, 0.03);
+  color: #000000;
+  border-color: #999999;
+  background-color: #fafafa;
 }
 
-.btn-check:checked+.pill-option {
+.btn-check:checked + .pill-option {
+  background-color: var(--amg-accent) !important;
+  border-color: var(--amg-accent) !important;
+  color: #ffffff !important;
+}
+
+.btn-enquiry-submit {
   background-color: var(--amg-accent);
-  border-color: var(--amg-accent);
-  color: #fff;
+  color: #ffffff;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 0.75rem 2.25rem;
+  border: none;
+  border-radius: 0;
+  transition: background-color 0.2s ease;
+}
+
+.btn-enquiry-submit:hover {
+  background-color: var(--amg-accent-dark);
+  color: #ffffff;
 }
 
 /* =========================================================
