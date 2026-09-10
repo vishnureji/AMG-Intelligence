@@ -302,33 +302,104 @@ a:hover {
 /* =========================================================
    Page: rankings.html
    ========================================================= */
-.ranking-row {
-  transition: background-color 0.2s ease;
+.ranking-item {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  transition: background-color 0.25s ease;
+  cursor: pointer;
 }
-.ranking-row:hover {
-  background-color: var(--amg-pink-bg);
+
+.ranking-item:hover,
+.ranking-item:focus {
+  text-decoration: none;
+  color: inherit;
 }
+
 .ranking-number {
-  min-width: 2.5rem;
+  min-width: 2.75rem;
+  font-family: 'Playfair Display', Georgia, serif;
   font-weight: 600;
+  font-size: 1.15rem;
+  color: var(--amg-muted);
+  transition: color 0.25s ease;
+}
+
+.ranking-item h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--amg-text);
+  transition: color 0.25s ease;
+}
+
+.ranking-item p {
+  font-size: 0.95rem;
+  line-height: 1.55;
   color: var(--amg-muted);
 }
-.ranking-number.is-accent {
-  color: var(--amg-accent);
-}
-.ranking-row h3 {
-  font-size: 1.75rem;
-}
+
 .ranking-view {
   color: var(--amg-text);
   font-weight: 700;
   font-size: 0.85rem;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.05em;
   white-space: nowrap;
+  text-decoration: none;
+  transition: color 0.25s ease;
 }
-.ranking-view.is-accent,
-.ranking-view:hover {
+
+.ranking-item:hover h3,
+.ranking-item:hover .ranking-number,
+.ranking-item:hover .ranking-view {
   color: var(--amg-accent);
+}
+
+/* Floating Book/Report Cover Preview on Hover */
+.ranking-cover-preview {
+  position: absolute;
+  right: 180px;
+  top: 50%;
+  transform: translateY(-50%) scale(0.96);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 20;
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              visibility 0.3s ease;
+}
+
+.ranking-cover-img {
+  width: 180px;
+  height: auto;
+  aspect-ratio: 1 / 1.45;
+  object-fit: cover;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.28), 0 6px 16px rgba(0, 0, 0, 0.12);
+  border-radius: 1px;
+  display: block;
+}
+
+.ranking-item:hover .ranking-cover-preview {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(-50%) scale(1);
+}
+
+@media (max-width: 1199.98px) {
+  .ranking-cover-preview {
+    right: 130px;
+  }
+  .ranking-cover-img {
+    width: 160px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .ranking-cover-preview {
+    display: none;
+  }
 }
 
 /* =========================================================
