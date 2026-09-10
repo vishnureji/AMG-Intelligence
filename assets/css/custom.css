@@ -31,6 +31,11 @@ body {
   max-width: 1206px;
 }
 
+/* Narrow centered container used for focused sections (Briefings preview, Clarity section, etc.) */
+.container-narrow {
+  max-width: 960px;
+}
+
 h1, h2, h3, h4,
 .font-serif {
   font-family: 'Playfair Display', Georgia, serif;
@@ -148,40 +153,118 @@ a:hover {
 }
 
 /* Four feature boxes ("Research & Reports", etc.) */
+.feature-boxes-row {
+  align-items: stretch;
+}
+
+.feature-boxes-row .feature-box-col {
+  display: flex;
+}
+
 .feature-box {
   position: relative;
   z-index: 1;
+  width: 100%;
+  background-color: #ffffff;
   border: 1px solid var(--amg-border);
-  padding: 1.75rem 1.5rem;
-  height: 100%;
-  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease,
-    transform 0.2s ease, box-shadow 0.2s ease;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-decoration: none;
+  cursor: pointer;
+  margin-left: -1px;
+  margin-top: -1px;
+  transition: background-color 0.25s ease,
+              border-color 0.25s ease,
+              box-shadow 0.25s ease;
 }
-/* Tile 1 ("Research & Reports") is active/highlighted by default; any tile
-   gets the same highlighted + "lifted" look on hover — it rises above its
-   row and its shadow overflows over the neighbouring tiles' borders. */
-.feature-box.is-highlighted,
-.feature-box:hover {
-  background-color: var(--amg-accent);
-  color: #fff;
-  border-color: var(--amg-accent);
-  transform: translateY(-6px);
-  box-shadow: 0 16px 32px rgba(38, 37, 36, 0.18);
-  z-index: 2;
-}
-.feature-box.is-highlighted p,
-.feature-box:hover p {
-  color: rgba(255, 255, 255, 0.85);
-}
+
 .feature-box h3 {
-  font-size: 1.15rem;
-  margin-bottom: 0.75rem;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--amg-text);
+  margin-bottom: 0.85rem;
+  transition: color 0.25s ease;
 }
+
 .feature-box p {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   color: var(--amg-muted);
-  font-size: 0.9rem;
+  font-size: 0.885rem;
+  line-height: 1.55;
   margin-bottom: 0;
-  transition: color 0.2s ease;
+  transition: color 0.25s ease;
+}
+
+.feature-box:hover,
+.feature-box:focus-visible {
+  background-color: var(--amg-accent);
+  border-color: var(--amg-accent);
+  box-shadow: 0 16px 32px rgba(38, 37, 36, 0.16);
+  z-index: 3;
+  outline: none;
+}
+
+.feature-box:hover h3,
+.feature-box:focus-visible h3 {
+  color: #ffffff;
+}
+
+.feature-box:hover p,
+.feature-box:focus-visible p {
+  color: rgba(255, 255, 255, 0.92);
+}
+
+/* Desktop layout: 4 columns in 1 row with bottom alignment & upward expansion on hover */
+@media (min-width: 992px) {
+  .feature-boxes-row {
+    min-height: 285px;
+    align-items: flex-end;
+  }
+  .feature-boxes-row .feature-box-col {
+    align-items: flex-end;
+    height: 100%;
+  }
+  .feature-box {
+    height: 240px;
+    min-height: 240px;
+    padding: 2.25rem 1.5rem 1.75rem;
+    transition: height 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+                min-height 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+                background-color 0.25s ease,
+                border-color 0.25s ease,
+                box-shadow 0.25s ease;
+  }
+  .feature-box:hover,
+  .feature-box:focus-visible {
+    height: 280px;
+    min-height: 280px;
+  }
+  .feature-box h3 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .feature-boxes-row {
+    min-height: 275px;
+  }
+  .feature-box {
+    height: 230px;
+    min-height: 230px;
+    padding: 2.25rem 1.75rem 2rem;
+  }
+  .feature-box:hover,
+  .feature-box:focus-visible {
+    height: 270px;
+    min-height: 270px;
+  }
+  .feature-box h3 {
+    font-size: 1.35rem;
+  }
 }
 
 /* Briefings preview cards (pink section) */
