@@ -405,62 +405,156 @@ a:hover {
 /* =========================================================
    Page: briefings.html
    ========================================================= */
+.tiers-row {
+  align-items: stretch;
+}
+
+.tiers-row .tier-col {
+  display: flex;
+}
+
 .tier-card {
-  border: 1px solid var(--amg-border);
-  padding: 1.75rem 1.5rem;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  background-color: #F3F3F3;
+  border: 1px solid #D8D8D8;
+  padding: 2.25rem 1.75rem 2rem;
+  margin-left: -1px;
+  margin-top: -1px;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              z-index 0.25s ease;
 }
+
+.tier-card:hover {
+  z-index: 5;
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px rgba(38, 37, 36, 0.12);
+}
+
 .tier-card.is-muted {
-  background-color: #F6F4F2;
+  background-color: #D1D1D1;
+  border-color: #BEBEBE;
 }
+
+.tier-card.is-muted .tier-audience,
+.tier-card.is-muted .tier-vat {
+  color: #4A4A4A;
+}
+
+.tier-card.is-muted hr {
+  border-color: #B5B5B5;
+}
+
 .tier-card.is-dark {
-  background-color: var(--amg-dark);
+  background-color: #303030;
   color: #fff;
-  border-color: var(--amg-dark);
+  border-color: #303030;
 }
+
 .tier-card.is-dark .tier-audience,
 .tier-card.is-dark .tier-vat {
   color: rgba(255, 255, 255, 0.7);
 }
+
 .tier-card.is-dark hr {
   border-color: rgba(255, 255, 255, 0.2);
   opacity: 1;
 }
+
 .tier-card.is-dark .tier-features li {
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .tier-label {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   color: var(--amg-accent);
-  font-size: 0.8rem;
+  font-size: 0.825rem;
   font-weight: 600;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.03em;
 }
-.tier-card h3 {
-  font-size: 1.3rem;
+
+.tier-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.45rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--amg-text);
+  min-height: 3.6rem;
 }
+
+.tier-card.is-dark .tier-title {
+  color: #ffffff;
+}
+
 .tier-price {
-  font-size: 1.1rem;
-}
-.tier-vat {
-  color: var(--amg-muted);
-  font-size: 0.8rem;
-}
-.tier-audience {
-  color: var(--amg-muted);
-  font-size: 0.85rem;
-}
-.tier-features li {
-  position: relative;
-  padding-left: 1rem;
-  margin-bottom: 0.5rem;
-  font-size: 0.85rem;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 700;
   color: var(--amg-text);
 }
+
+.tier-card.is-dark .tier-price {
+  color: #ffffff;
+}
+
+.tier-vat {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: var(--amg-muted);
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.tier-audience {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: var(--amg-muted);
+  font-size: 0.875rem;
+  line-height: 1.55;
+  min-height: 3.6rem;
+}
+
+.tier-card hr {
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+  border-color: #D8D8D8;
+  opacity: 1;
+}
+
+.tier-features li {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  position: relative;
+  padding-left: 1rem;
+  margin-bottom: 0.6rem;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--amg-text);
+}
+
 .tier-features li::before {
   content: '*';
   position: absolute;
   left: 0;
   color: var(--amg-accent);
+  font-weight: bold;
+}
+
+.tier-card .btn {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.tier-card .btn-outline-dark {
+  background-color: transparent;
+  border-color: #262524;
+  color: #262524;
+}
+
+.tier-card .btn-outline-dark:hover {
+  background-color: #262524;
+  color: #ffffff;
 }
 
 /* =========================================================
