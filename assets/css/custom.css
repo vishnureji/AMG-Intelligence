@@ -184,11 +184,27 @@ a:hover {
   max-width: 32rem;
 }
 
-.hero-image img {
+.hero-image {
+  background: transparent;
+}
+
+.hero-image img,
+.hero-image video,
+.hero-video,
+.hero-lottie {
   width: 100%;
   height: auto;
-  object-fit: cover;
-  border-radius: 2px;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  display: block;
+}
+
+.hero-lottie svg {
+  width: 100% !important;
+  height: auto !important;
+  display: block;
 }
 
 /* Clarity intro section */
