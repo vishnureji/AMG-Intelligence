@@ -7,16 +7,22 @@
 
 /* ---------- 1. Design tokens ---------- */
 :root {
-  --amg-accent: #E8492C;        /* coral/red-orange brand accent */
+  --amg-accent: #E8492C;
+  /* coral/red-orange brand accent */
   --amg-accent-dark: #C93B21;
-  --amg-dark: #262524;          /* near-black section background */
-  --amg-pink-bg: #FCEAE4;       /* light pink section background */
-  --amg-cream: #FDF1E4;         /* hero gradient start */
-  --amg-peach: #F3A98F;         /* hero gradient end */
+  --amg-dark: #262524;
+  /* near-black section background */
+  --amg-pink-bg: #FCEAE4;
+  /* light pink section background */
+  --amg-cream: #FDF1E4;
+  /* hero gradient start */
+  --amg-peach: #F3A98F;
+  /* hero gradient end */
   --amg-text: #1C1C1C;
   --amg-muted: #6E6E6E;
   --amg-border: #E5E1DD;
-  --amg-border-strong: #6F6F6F;  /* darker divider lines, used in the Events enquiry form */
+  --amg-border-strong: #6F6F6F;
+  /* darker divider lines, used in the Events enquiry form */
   --amg-footer-bg: #F4F2F0;
 }
 
@@ -36,7 +42,10 @@ body {
   max-width: 960px;
 }
 
-h1, h2, h3, h4,
+h1,
+h2,
+h3,
+h4,
 .font-serif {
   font-family: 'Playfair Display', Georgia, serif;
   font-weight: 700;
@@ -46,6 +55,7 @@ a {
   color: var(--amg-accent);
   text-decoration: none;
 }
+
 a:hover {
   color: var(--amg-accent-dark);
 }
@@ -56,11 +66,13 @@ a:hover {
   border-color: var(--amg-accent);
   color: #fff;
 }
+
 .btn-accent:hover {
   background-color: var(--amg-accent-dark);
   border-color: var(--amg-accent-dark);
   color: #fff;
 }
+
 .btn-outline-dark.rounded-0,
 .btn-dark.rounded-0,
 .btn-accent.rounded-0 {
@@ -71,11 +83,13 @@ a:hover {
 .navbar {
   background-color: transparent;
 }
+
 .navbar .nav-link {
   color: var(--amg-text);
   font-size: 0.95rem;
   font-weight: 500;
 }
+
 .navbar .nav-link.active,
 .navbar .nav-link:hover {
   color: var(--amg-accent);
@@ -85,10 +99,12 @@ a:hover {
 .cta-band {
   background-color: var(--amg-accent);
 }
+
 .cta-eyebrow {
   opacity: 0.85;
   letter-spacing: 0.08em;
 }
+
 .cta-sub {
   opacity: 0.95;
 }
@@ -96,20 +112,25 @@ a:hover {
 .footer-section {
   background-color: var(--amg-footer-bg);
 }
+
 .footer-links li {
   margin-bottom: 0.5rem;
 }
+
 .footer-links a {
   color: var(--amg-text);
   font-size: 0.9rem;
 }
+
 .footer-links a:hover {
   color: var(--amg-accent);
 }
+
 .footer-subscribe .form-control {
   border-color: var(--amg-text);
   border-right: none;
 }
+
 .footer-subscribe .form-control:focus {
   box-shadow: none;
   border-color: var(--amg-text);
@@ -176,8 +197,8 @@ a:hover {
   margin-left: -1px;
   margin-top: -1px;
   transition: background-color 0.25s ease,
-              border-color 0.25s ease,
-              box-shadow 0.25s ease;
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .feature-box h3 {
@@ -224,25 +245,29 @@ a:hover {
     min-height: 285px;
     align-items: flex-end;
   }
+
   .feature-boxes-row .feature-box-col {
     align-items: flex-end;
     height: 100%;
   }
+
   .feature-box {
     height: 240px;
     min-height: 240px;
     padding: 2.25rem 1.5rem 1.75rem;
     transition: height 0.3s cubic-bezier(0.16, 1, 0.3, 1),
-                min-height 0.3s cubic-bezier(0.16, 1, 0.3, 1),
-                background-color 0.25s ease,
-                border-color 0.25s ease,
-                box-shadow 0.25s ease;
+      min-height 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+      background-color 0.25s ease,
+      border-color 0.25s ease,
+      box-shadow 0.25s ease;
   }
+
   .feature-box:hover,
   .feature-box:focus-visible {
     height: 280px;
     min-height: 280px;
   }
+
   .feature-box h3 {
     font-size: 1.3rem;
   }
@@ -252,16 +277,19 @@ a:hover {
   .feature-boxes-row {
     min-height: 275px;
   }
+
   .feature-box {
     height: 230px;
     min-height: 230px;
     padding: 2.25rem 1.75rem 2rem;
   }
+
   .feature-box:hover,
   .feature-box:focus-visible {
     height: 270px;
     min-height: 270px;
   }
+
   .feature-box h3 {
     font-size: 1.35rem;
   }
@@ -271,17 +299,21 @@ a:hover {
 .briefings-preview-section {
   background-color: var(--amg-pink-bg);
 }
+
 .briefing-card img {
   width: 100%;
   height: 260px;
   object-fit: cover;
 }
+
 .briefing-card h3 {
   margin-top: 1.25rem;
 }
+
 .briefing-card p {
   color: var(--amg-muted);
 }
+
 .briefing-card .link-arrow {
   color: var(--amg-accent);
   font-weight: 600;
@@ -292,9 +324,11 @@ a:hover {
   background-color: var(--amg-dark);
   color: #fff;
 }
+
 .clarity-section .eyebrow {
   color: var(--amg-accent);
 }
+
 .clarity-section p {
   color: rgba(255, 255, 255, 0.75);
 }
@@ -367,8 +401,8 @@ a:hover {
   pointer-events: none;
   z-index: 20;
   transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1),
-              transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
-              visibility 0.3s ease;
+    transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+    visibility 0.3s ease;
 }
 
 .ranking-cover-img {
@@ -391,6 +425,7 @@ a:hover {
   .ranking-cover-preview {
     right: 130px;
   }
+
   .ranking-cover-img {
     width: 160px;
   }
@@ -423,8 +458,8 @@ a:hover {
   margin-left: -1px;
   margin-top: -1px;
   transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
-              box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1),
-              z-index 0.25s ease;
+    box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+    z-index 0.25s ease;
 }
 
 .tier-card:hover {
@@ -560,28 +595,75 @@ a:hover {
 /* =========================================================
    Page: insights.html
    ========================================================= */
+.insights-grid {
+  align-items: stretch;
+}
+
 .insight-card {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  background-color: #ffffff;
   border: 1px solid var(--amg-border);
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
+  padding: 2.25rem 1.75rem 1.75rem;
+  margin-left: -1px;
+  margin-top: -1px;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+    z-index 0.25s ease;
 }
+
+.insight-card:hover {
+  z-index: 5;
+  background-color: #ffffff;
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px rgba(38, 37, 36, 0.08);
+}
+
 .insight-category {
+  font-family: Georgia, serif;
+  font-weight: 400;
   color: var(--amg-accent);
-  font-size: 0.8rem;
-  font-weight: 600;
+  font-size: 0.9rem;
 }
-.insight-card h3 {
-  font-size: 1.15rem;
-  flex-grow: 1;
+
+.insight-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--amg-text);
+  min-height: 4.8rem;
+  transition: color 0.2s ease;
 }
+
+.insight-card:hover .insight-title {
+  color: var(--amg-accent);
+}
+
+.insight-divider {
+  border: 0;
+  border-top: 1px solid var(--amg-border);
+  opacity: 1;
+  width: 100%;
+  margin: 0;
+}
+
 .insight-meta {
+  font-family: Georgia, serif;
+  font-weight: 400;
   color: var(--amg-muted);
-  font-size: 0.8rem;
+  font-size: 0.85rem;
 }
+
 .insight-filler {
   border: 1px solid var(--amg-border);
-  background-color: var(--amg-footer-bg);
+  background-color: #F3F3F3;
+  margin-left: -1px;
+  margin-top: -1px;
 }
 
 /* =========================================================
@@ -597,6 +679,7 @@ a:hover {
     linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
     url('../images/Executive forums leadership dinners rankings celebrations and industry conferences-background.png') center / cover no-repeat;
 }
+
 .formats-banner h2 {
   font-size: 1.75rem;
 }
@@ -609,21 +692,26 @@ a:hover {
   border: 1px solid var(--amg-border-strong);
   background-color: transparent;
 }
+
 .enquiry-row {
   border-bottom: 1px solid var(--amg-border-strong);
   margin: 0;
 }
+
 .enquiry-row.is-last {
   border-bottom: none;
 }
+
 .enquiry-field {
   padding: 1rem 1.25rem;
 }
+
 @media (min-width: 768px) {
   .border-end-md {
     border-right: 1px solid var(--amg-border-strong);
   }
 }
+
 .enquiry-label {
   display: block;
   font-size: 0.7rem;
@@ -633,6 +721,7 @@ a:hover {
   color: var(--amg-muted);
   margin-bottom: 0.25rem;
 }
+
 .enquiry-input {
   border: 0;
   padding: 0;
@@ -640,22 +729,26 @@ a:hover {
   font-size: 0.95rem;
   border-radius: 0;
 }
+
 .enquiry-input:focus {
   box-shadow: none;
   background: transparent;
 }
+
 .pill-option {
   font-size: 0.8rem;
   padding: 0.4rem 0.9rem;
   color: var(--amg-text);
   border-color: var(--amg-border-strong);
 }
+
 .pill-option:hover {
   color: var(--amg-text);
   border-color: var(--amg-border-strong);
   background-color: rgba(0, 0, 0, 0.03);
 }
-.btn-check:checked + .pill-option {
+
+.btn-check:checked+.pill-option {
   background-color: var(--amg-accent);
   border-color: var(--amg-accent);
   color: #fff;
@@ -669,11 +762,13 @@ a:hover {
   padding: 1.5rem;
   height: 100%;
 }
+
 .question-number {
   font-family: 'Playfair Display', Georgia, serif;
   font-size: 2.25rem;
   color: var(--amg-accent);
 }
+
 .question-text {
   font-weight: 700;
 }
@@ -681,17 +776,21 @@ a:hover {
 .focus-section {
   background-color: var(--amg-footer-bg);
 }
+
 .focus-row {
   transition: background-color 0.2s ease;
 }
+
 .focus-row:hover {
   background-color: #fff;
 }
+
 .focus-number {
   min-width: 2.5rem;
   font-weight: 600;
   color: var(--amg-muted);
 }
+
 .focus-row h3 {
   font-size: 1.5rem;
 }
@@ -706,11 +805,13 @@ a:hover {
 .ambition-band {
   background-color: var(--amg-accent);
 }
+
 .ambition-band h2 {
   max-width: 46rem;
   margin-left: auto;
   margin-right: auto;
 }
+
 .ambition-eyebrow {
   opacity: 0.85;
   letter-spacing: 0.08em;
