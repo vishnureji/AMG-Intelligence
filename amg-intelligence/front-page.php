@@ -98,15 +98,19 @@ get_header();
 
 <!-- Clarity in an Uncertain World -->
 <section class="clarity-section py-5">
-	<div class="container container-narrow py-5">
+	<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/AMG Icon.png' ); ?>" alt="" class="watermark-logo" aria-hidden="true">
+	<div class="container py-lg-4">
 		<div class="row gy-4 align-items-center">
-			<div class="col-lg-5">
-				<h2 class="font-serif fw-normal mb-0"><?php esc_html_e( 'Clarity in an Uncertain World', 'amg-intelligence' ); ?></h2>
+			<div class="col-lg-5 pe-lg-4">
+				<p class="clarity-eyebrow mb-1"><?php esc_html_e( 'WHY', 'amg-intelligence' ); ?></p>
+				<h2 class="clarity-brand-title"><?php echo wp_kses( __( 'AMG<br>Intelligence', 'amg-intelligence' ), array( 'br' => array() ) ); ?></h2>
+				<p class="clarity-tagline"><?php esc_html_e( 'Clarity in an Uncertain World', 'amg-intelligence' ); ?></p>
+				<div class="clarity-accent-bar"></div>
 			</div>
-			<div class="col-lg-7">
-				<p class="eyebrow mb-1"><?php esc_html_e( 'Most organisations tell you what happened.', 'amg-intelligence' ); ?></p>
-				<p class="clarity-highlight fs-4 mb-3"><?php esc_html_e( 'We help you understand what happens next.', 'amg-intelligence' ); ?></p>
-				<p class="mb-0"><?php esc_html_e( 'By combining research, journalism, business intelligence and direct access to influential leaders, we provide insight designed to support better decisions, stronger strategies and sustainable growth.', 'amg-intelligence' ); ?></p>
+			<div class="col-lg-7 clarity-right-col">
+				<p class="clarity-eyebrow mb-2"><?php esc_html_e( 'MOST ORGANISATIONS TELL YOU WHAT HAPPENED.', 'amg-intelligence' ); ?></p>
+				<h3 class="clarity-highlight-title"><?php echo wp_kses( __( 'We help you understand<br>what happens <span class="accent-text">next.</span>', 'amg-intelligence' ), array( 'br' => array(), 'span' => array( 'class' => array() ) ) ); ?></h3>
+				<p class="clarity-desc mb-0"><?php esc_html_e( 'By combining research, journalism, business intelligence and direct access to influential leaders, we provide insight designed to support better decisions, stronger strategies and sustainable growth.', 'amg-intelligence' ); ?></p>
 			</div>
 		</div>
 	</div>
