@@ -50,12 +50,12 @@
 					} else {
 						?>
 						<ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center gap-lg-4 text-center me-lg-4">
-							<li class="nav-item"><a class="nav-link" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php esc_html_e( 'Home', 'amg-intelligence' ); ?></a></li>
-							<li class="nav-item"><a class="nav-link" href="<?php echo esc_url( home_url( '/rankings/' ) ); ?>"><?php esc_html_e( 'Rankings', 'amg-intelligence' ); ?></a></li>
-							<li class="nav-item"><a class="nav-link" href="<?php echo esc_url( home_url( '/briefings/' ) ); ?>"><?php esc_html_e( 'Briefings', 'amg-intelligence' ); ?></a></li>
-							<li class="nav-item"><a class="nav-link" href="<?php echo esc_url( home_url( '/insights/' ) ); ?>"><?php esc_html_e( 'Insights', 'amg-intelligence' ); ?></a></li>
-							<li class="nav-item"><a class="nav-link" href="<?php echo esc_url( home_url( '/events/' ) ); ?>"><?php esc_html_e( 'Events', 'amg-intelligence' ); ?></a></li>
-							<li class="nav-item"><a class="nav-link" href="<?php echo esc_url( home_url( '/about/' ) ); ?>"><?php esc_html_e( 'About', 'amg-intelligence' ); ?></a></li>
+							<li class="nav-item"><a class="nav-link<?php echo ( is_front_page() || is_home() ) ? ' active' : ''; ?>" <?php echo ( is_front_page() || is_home() ) ? 'aria-current="page"' : ''; ?> href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php esc_html_e( 'Home', 'amg-intelligence' ); ?></a></li>
+							<li class="nav-item"><a class="nav-link<?php echo is_page( array( 'rankings', 'ranking' ) ) ? ' active' : ''; ?>" <?php echo is_page( array( 'rankings', 'ranking' ) ) ? 'aria-current="page"' : ''; ?> href="<?php echo esc_url( home_url( '/rankings/' ) ); ?>"><?php esc_html_e( 'Rankings', 'amg-intelligence' ); ?></a></li>
+							<li class="nav-item"><a class="nav-link<?php echo is_page( array( 'briefings', 'briefing' ) ) ? ' active' : ''; ?>" <?php echo is_page( array( 'briefings', 'briefing' ) ) ? 'aria-current="page"' : ''; ?> href="<?php echo esc_url( home_url( '/briefings/' ) ); ?>"><?php esc_html_e( 'Briefings', 'amg-intelligence' ); ?></a></li>
+							<li class="nav-item"><a class="nav-link<?php echo is_page( array( 'insights', 'insight' ) ) ? ' active' : ''; ?>" <?php echo is_page( array( 'insights', 'insight' ) ) ? 'aria-current="page"' : ''; ?> href="<?php echo esc_url( home_url( '/insights/' ) ); ?>"><?php esc_html_e( 'Insights', 'amg-intelligence' ); ?></a></li>
+							<li class="nav-item"><a class="nav-link<?php echo is_page( array( 'events', 'event' ) ) ? ' active' : ''; ?>" <?php echo is_page( array( 'events', 'event' ) ) ? 'aria-current="page"' : ''; ?> href="<?php echo esc_url( home_url( '/events/' ) ); ?>"><?php esc_html_e( 'Events', 'amg-intelligence' ); ?></a></li>
+							<li class="nav-item"><a class="nav-link<?php echo is_page( array( 'about', 'about-us' ) ) ? ' active' : ''; ?>" <?php echo is_page( array( 'about', 'about-us' ) ) ? 'aria-current="page"' : ''; ?> href="<?php echo esc_url( home_url( '/about/' ) ); ?>"><?php esc_html_e( 'About', 'amg-intelligence' ); ?></a></li>
 						</ul>
 						<?php
 					}

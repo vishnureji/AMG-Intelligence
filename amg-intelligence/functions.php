@@ -105,7 +105,22 @@ add_action( 'wp_enqueue_scripts', 'amg_intelligence_scripts' );
 function amg_intelligence_nav_menu_link_attributes( $atts, $item, $args ) {
 	if ( isset( $args->theme_location ) && 'primary' === $args->theme_location ) {
 		$atts['class'] = ( ! empty( $atts['class'] ) ? $atts['class'] . ' ' : '' ) . 'nav-link';
+		if ( ! empty( $item->current ) || in_array( 'current-menu-item', (array) $item->classes, true ) || in_array( 'current_page_item', (array) $item->classes, true ) || in_array( 'current-menu-ancestor', (array) $item->classes, true ) ) {
+			$atts['class'] .= ' active';
+			$atts['aria-current'] = 'page';
+		}
 	}
 	return $atts;
 }
 add_filter( 'nav_menu_link_attributes', 'amg_intelligence_nav_menu_link_attributes', 10, 3 );
+
+function amg_intelligence_nav_menu_css_class( $classes, $item, $args ) {
+	if ( isset( $args->theme_location ) && 'primary' === $args->theme_location ) {
+		$classes[] = 'nav-item';
+		if ( ! empty( $item->current ) || in_array( 'current-menu-item', $classes, true ) || in_array( 'current_page_item', $classes, true ) || in_array( 'current-menu-ancestor', $classes, true ) ) {
+			$classes[] = 'active';
+		}
+	}
+	return $classes;
+}
+add_filter( 'nav_menu_css_class', 'amg_intelligence_nav_menu_css_class', 10, 3 );
